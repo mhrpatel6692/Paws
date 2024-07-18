@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_corner_radius">4dp</dimen>
+    <dimen name="icon_medium">24dp</dimen>
+    <dimen name="icon_large">36dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_xxsmall">2dp</dimen>
+    <dimen name="margin_xxxsmall">0.5dp</dimen>
+</resources>

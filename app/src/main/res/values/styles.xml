@@ -1,0 +1,108 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Pawsome.ThemeOverlay.ActionBar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">#9C2CF3</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance" parent="TextAppearance.AppCompat" />
+
+    <style name="Pawsome.TextAppearance.Heading">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Heading.White">
+        <item name="android:textColor">@color/textColorWhite</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Heading.Black">
+        <item name="android:textColor">@color/textColorBlack</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Heading.White.Medium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Heading.Black.Medium">
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">36sp</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Heading.Small">
+        <item name="android:textSize">22sp</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Heading.XSmall">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">28sp</item>
+    </style>
+
+
+    <style name="Pawsome.TextAppearance.Body">
+        <item name="android:textColor">#2E3333</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Purple">
+        <item name="android:textColor">#C766FF</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.White">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Body.Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22sp</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Purple.Medium">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22sp</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Body.Medium.Bold">
+        <item name="lineHeight">24sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Body.Medium.Bold.White">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Body.Small">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Body.XSmall">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">18sp</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.Body.XSmall.Inverted">
+        <item name="android:textColor">#E6E6E6</item>
+    </style>
+
+    <style name="Pawsome.TextAppearance.CardTitle">
+        <item name="lineHeight">24sp</item>
+        <item name="android:textColor">#2B2B2B</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Widget.Theme.com.paws.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="Widget.Theme.com.paws.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+</resources>
