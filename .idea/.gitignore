@@ -3,7 +3,7 @@
 /workspace.xml
 *.iml
 .gradle
-/.gradle/
+.gradle/
 /local.properties
 /.idea/caches
 /.idea/libraries
