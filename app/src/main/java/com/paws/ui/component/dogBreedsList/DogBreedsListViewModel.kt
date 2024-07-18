@@ -31,6 +31,10 @@ class DogBreedsListViewModel @Inject constructor(
         addSubscription(fetchDogBreeds())
     }
 
+    fun refresh() {
+        fetchDogBreeds()
+    }
+
     private fun fetchDogBreeds(): Disposable =
         dogBreedsUseCase.getDogBreeds()
             .subscribeOn(Schedulers.io())

@@ -7,7 +7,7 @@
     android:layout_marginTop="@dimen/margin_xxsmall"
     tools:context=".ui.MainActivity">
 
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_dog"
         android:layout_width="0dp"
         android:layout_height="256dp"
@@ -17,8 +17,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <ImageView
+    <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/image_favorite"
         android:layout_width="@dimen/icon_large"
         android:layout_height="@dimen/icon_large"
@@ -28,7 +27,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_breed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,7 +38,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Breeds" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_sub_breed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,6 +48,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         tools:text="Sub Breeds" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -83,7 +83,7 @@ dependencies {
     implementation "androidx.room:room-rxjava2:$room"
 
     implementation 'com.github.bumptech.glide:glide:4.16.0'
-
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
     // For Navigation animation
     implementation "com.google.accompanist:accompanist-navigation-animation:$accompanist_version"
 

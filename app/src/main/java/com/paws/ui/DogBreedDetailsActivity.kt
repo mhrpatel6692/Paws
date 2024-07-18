@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
@@ -99,10 +100,20 @@ class DogBreedDetailsActivity : AppCompatActivity() {
     }
 
     private fun displayResults(results: List<String>) {
-        adapter.submitList(results)
+        if (results.isNullOrEmpty()) {
+            handlePlaceholders(View.VISIBLE)
+        } else {
+            handlePlaceholders(View.GONE)
+            adapter.submitList(results)
+        }
     }
 
     private fun displayError() {
+        handlePlaceholders(View.VISIBLE)
         Toast.makeText(this, R.string.connection_error, Toast.LENGTH_SHORT).show()
+    }
+
+    private fun handlePlaceholders(visibility: Int) {
+        binding.imageNoData.visibility = visibility
     }
 }

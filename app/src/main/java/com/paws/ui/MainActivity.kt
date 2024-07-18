@@ -2,9 +2,11 @@ package com.paws.ui
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.paws.R
 import com.paws.databinding.ActivityMainBinding
 import com.paws.domain.model.DogBreed
@@ -31,6 +33,7 @@ class MainActivity : BaseActivity() {
         val linearLayoutManager = LinearLayoutManager(this)
         binding.recycler.layoutManager = linearLayoutManager
         binding.recycler.adapter = adapter
+        binding.swipeRefresh.setOnRefreshListener { dogBreedListViewModel.refresh() }
         adapter.setOnFavoriteClick { breedName, isFavorite ->
             Toast.makeText(this, getString(R.string.coming_soon), Toast.LENGTH_LONG).show()
             // dogBreedListViewModel.addToFavourites(breedName, isFavorite)
@@ -40,7 +43,6 @@ class MainActivity : BaseActivity() {
             intent.putExtra(Constants.KEY_BREED_NAME, breedName)
             startActivity(intent)
         }
-
         dogBreedListViewModel.pawState.observe(this, ::updateState)
     }
 
@@ -52,10 +54,26 @@ class MainActivity : BaseActivity() {
     }
 
     private fun displayResults(results: List<DogBreed>) {
-        adapter.submitList(results)
+        hideCommonProgress()
+        if (results.isNullOrEmpty()) {
+            handlePlaceholders(View.VISIBLE)
+        } else {
+            handlePlaceholders(View.GONE)
+            adapter.submitList(results)
+        }
     }
 
     private fun displayError() {
-        Toast.makeText(this, R.string.connection_error, Toast.LENGTH_SHORT).show()
+        hideCommonProgress()
+        handlePlaceholders(View.VISIBLE)
+        Toast.makeText(this, R.string.connection_error, Toast.LENGTH_LONG).show()
+    }
+
+    private fun hideCommonProgress() {
+        binding.swipeRefresh.isRefreshing = false
+    }
+
+    private fun handlePlaceholders(visibility: Int) {
+        binding.imageNoData.visibility = visibility
     }
 }

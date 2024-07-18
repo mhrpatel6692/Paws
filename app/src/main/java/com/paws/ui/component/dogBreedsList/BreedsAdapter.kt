@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
+import com.bumptech.glide.request.RequestOptions
 import com.paws.R
 import com.paws.data.remote.service.DogBreedsApi
 import com.paws.databinding.ItemDogBreeadBinding
@@ -87,7 +88,7 @@ class BreedsAdapter @Inject constructor(
             }
 
             override fun areContentsTheSame(old: DogBreed, new: DogBreed): Boolean {
-                return old.isFavourite == new.isFavourite
+                return old == new
             }
         }
     }
