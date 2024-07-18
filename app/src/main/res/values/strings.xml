@@ -58,4 +58,5 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="text_powered_by">powered by Dog API app</string>
+    <string name="coming_soon">Coming Soon!</string>
 </resources>

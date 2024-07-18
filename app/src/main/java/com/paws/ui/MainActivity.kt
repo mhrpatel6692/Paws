@@ -32,7 +32,8 @@ class MainActivity : BaseActivity() {
         binding.recycler.layoutManager = linearLayoutManager
         binding.recycler.adapter = adapter
         adapter.setOnFavoriteClick { breedName, isFavorite ->
-            dogBreedListViewModel.addToFavourites(breedName, isFavorite)
+            Toast.makeText(this, getString(R.string.coming_soon), Toast.LENGTH_LONG).show()
+            // dogBreedListViewModel.addToFavourites(breedName, isFavorite)
         }
         adapter.setOnRootClick { breedName ->
             val intent = Intent(this, DogBreedDetailsActivity::class.java)
